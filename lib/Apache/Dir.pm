@@ -1,6 +1,6 @@
 package Apache::Dir;
 
-$Apache::Dir::VERSION = '0.04';
+$Apache::Dir::VERSION = '0.05';
 
 # Define constants for compatibility with mod_perl 1 and mod_perl 2.
 use constant DECLINED               => -1;
@@ -69,17 +69,22 @@ execute first:
     PerlHandler Apache::Dir HTML::Mason::ApacheHandler
   </Location>
 
-=head1 BUGS
+=head1 SUPPORT
 
-Please send bug reports to <bug-apache-dir@rt.cpan.org>.
+This module is stored in an open repository at the following address:
+
+L<https://svn.kineticode.com/Apache-Dir/trunk/>
+
+Patches against Apache::Dir are welcome. Please send bug reports to
+<bug-apache-dir@rt.cpan.org>.
 
 =head1 AUTHOR
 
-David Wheeler, E<lt>david@kineticode.comE<gt>
+David Wheeler, <david@kineticode.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2004 by David Wheeler
+Copyright 2004-2008 by David Wheeler. Some Rights Reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
