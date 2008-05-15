@@ -1,4 +1,4 @@
-Apache/Dir version 0.05
+Apache/Dir version 0.06
 =======================
 
     This simple module is designed to be a partial replacement for the
@@ -50,7 +50,7 @@ AUTHOR
 
 COPYRIGHT AND LICENSE
 
-    Copyright 2004-2008 by David Wheeler
+    Copyright 2004-2008 by David Wheeler. Some Rights Reserved.
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
