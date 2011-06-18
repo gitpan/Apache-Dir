@@ -1,6 +1,6 @@
 package Apache::Dir;
 
-$Apache::Dir::VERSION = '0.06';
+$Apache::Dir::VERSION = '0.07';
 
 # Define constants for compatibility with mod_perl 1 and mod_perl 2.
 use constant DECLINED               => -1;
@@ -19,16 +19,16 @@ sub handler {
 1;
 __END__
 
-=head1 NAME
+=head1 Name
 
 Apache::Dir - Simple Perl Version of mod_dir
 
-=head1 SYNOPSIS
+=head1 Synopsis
 
   PerlModule Apache::Dir
   PerlFixupHandler Apache::Dir
 
-=head1 DESCRIPTION
+=head1 Description
 
 This simple module is designed to be a partial replacement for the standard
 Apache C<mod_dir> module. One of the things that module does is to redirect
@@ -38,7 +38,7 @@ response phase, if you use a Perl handler, it won't run. This can be
 problematic if the Perl handler doesn't likewise take the directory
 redirecting into account.
 
-A good example is HTML::Mason. If you've disabled Mason's C<decline_dirs>
+A good example is L<HTML::Mason>. If you've disabled Mason's C<decline_dirs>
 parameter (C<MasonDeclineDirs 0> in F<httpd.conf>), and there's a F<dhandler>
 in the directory F</foo>, then for a request for F</foo>, F</foo/dhandler>
 will respond. This can wreak havoc if you use relative URLs in the
@@ -69,22 +69,23 @@ execute first:
     PerlHandler Apache::Dir HTML::Mason::ApacheHandler
   </Location>
 
-=head1 SUPPORT
+=head1 Support
 
-This module is stored in an open repository at the following address:
+This module is stored in an open L<GitHub
+repository|http://github.com/theory/apache-dir/tree/>. Feel free to fork and
+contribute!
 
-L<https://svn.kineticode.com/Apache-Dir/trunk/>
+Please file bug reports via L<GitHub
+Issues|http://github.com/theory/apache-dir/issues/> or by sending mail to
+L<bug-Apache-Dir@rt.cpan.org|mailto:bug-Apache-Dir@rt.cpan.org>.
 
-Patches against Apache::Dir are welcome. Please send bug reports to
-<bug-apache-dir@rt.cpan.org>.
+=head1 Author
 
-=head1 AUTHOR
+David E. Wheeler <david@justatheory.com>
 
-David Wheeler, <david@kineticode.com>
+=head1 Copyright and License
 
-=head1 COPYRIGHT AND LICENSE
-
-Copyright 2004-2008 by David Wheeler. Some Rights Reserved.
+Copyright 2004-2011 by David E. Wheeler. Some Rights Reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
